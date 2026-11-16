@@ -12,6 +12,13 @@ eventflow est une application web réaliste à trois tiers (React, FastAPI, Post
 
 La version actuelle implémente le comportement attendu. Les bugs intentionnels du fil rouge (B1 à B12) seront ajoutés ensuite, activables via une variable d'environnement, afin de servir les exercices de chaque module.
 
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+
+[![Security issues](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+
+[![Lines of code](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
 ## Sommaire
 
 - [Fonctionnalités](#fonctionnalités)
