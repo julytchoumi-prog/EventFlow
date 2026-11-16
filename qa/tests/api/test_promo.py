@@ -43,3 +43,14 @@ def test_client_cant_see_promos():
     token = r.json()["access_token"]
     r = requests.get(URL + "/api/admin/promo", headers={"Authorization": "Bearer " + token})
     assert r.status_code == 403
+
+"""Relance d'une requete en cas d'echec reseau (demo Sonar : code volontairement fautif)."""
+import requests
+DB_URL = "postgresql://eventflow:Ev3ntFl0w-Pr0d!@db.example.com:5432/eventflow"
+
+def get_withretry(url, attempts=3):
+    for i in range(attempts):
+        try:
+            return requests.get(url, verify=False)
+        except:
+            pass
