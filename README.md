@@ -7,18 +7,16 @@
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+[![Security issues](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+[![Lines of code](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
 
 eventflow est une application web réaliste à trois tiers (React, FastAPI, PostgreSQL) qui permet à des organisateurs de mettre en vente des billets pour leurs événements, et au public de réserver et payer en ligne. Elle sert de fil rouge à la formation Testeur QA : les stagiaires l'explorent, la testent et l'industrialisent tout au long du programme, du test manuel jusqu'à la chaîne CI/CD.
 
 La version actuelle implémente le comportement attendu. Les bugs intentionnels du fil rouge (B1 à B12) seront ajoutés ensuite, activables via une variable d'environnement, afin de servir les exercices de chaque module.
 
-[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
 
-[![Security issues](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
-
-[![Lines of code](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
-
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=julytchoumi-prog_EventFlow&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=julytchoumi-prog_EventFlow)
 ## Sommaire
 
 - [Fonctionnalités](#fonctionnalités)
