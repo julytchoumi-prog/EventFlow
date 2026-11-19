@@ -1,0 +1,24 @@
+
+# Configuration Ruff - Projet QA
+# Version Python cible
+target-version = "py312"
+
+# Longueur maximale des lignes
+line-length = 120
+
+[lint]
+
+# Règles de base + familles supplémentaires
+select = [
+    "E4",   # Erreurs de syntaxe et de style
+    "E7",   # Problèmes de structure du code
+    "E9",   # Erreurs d'exécution
+    "F",    # Détection des erreurs par Pyflakes
+    "T20",  # Détecter les print() oubliés dans le code
+    "T10",  # Détecter les breakpoint() oubliés
+    "PT",   # Appliquer les bonnes pratiques pytest
+    "N",    # Respecter les conventions de nommage PEP 8
+]
+
+# Aucune exception ignore ou per-file-ignores pour le moment.
+# Toute exception future devra être justifiée et commentée.

@@ -1,6 +1,9 @@
-import requests, json, time, os
+import logging
+import requests
+import time
 
 URL = "http://localhost:8000"
+logger = logging.getLogger(__name__)
 
 
 def get_token():
@@ -11,9 +14,13 @@ def get_token():
 def test_1():
     token = get_token()
     h = {"Authorization": "Bearer " + token}
-    r = requests.post(URL + "/api/admin/promo", headers=h, json={"code": "TEST" + str(int(time.time())), "percent_off": 20, "max_uses": 5})
-    print(r.json())
+    r = requests.post(
+        URL + "/api/admin/promo",
+        headers=h,
+        json={"code": "TEST" + str(int(time.time())), "percent_off": 20, "max_uses": 5},
+    )
     assert r.status_code == 201
+    logger.info("Promo créé : %s", r.json())
 
 
 def test_promo2():
@@ -29,13 +36,16 @@ def test_promo2():
 def test_disable_promo():
     token = get_token()
     h = {"Authorization": "Bearer " + token}
-    try:
-        r = requests.post(URL + "/api/admin/promo", headers=h, json={"code": "DIS" + str(int(time.time())), "percent_off": 5, "max_uses": 1})
-        id = r.json()["id"]
-        r2 = requests.post(URL + "/api/admin/promo/" + str(id) + "/disable", headers=h)
-        assert r2.json()["expires_at"] != None
-    except:
-        pass
+    r = requests.post(
+        URL + "/api/admin/promo",
+        headers=h,
+        json={"code": "DIS" + str(int(time.time())), "percent_off": 5, "max_uses": 1},
+    )
+    assert r.status_code == 201, r.text
+    promo_id = r.json()["id"]
+    r2 = requests.post(URL + f"/api/admin/promo/{promo_id}/disable", headers=h)
+    assert r2.status_code == 200, r2.text
+    assert r2.json()["expires_at"] is not None
 
 
 def test_client_cant_see_promos():
