@@ -1,4 +1,5 @@
 """Fabriques de donnees de test : evenements et utilisateurs isoles par execution."""
+
 import uuid
 from datetime import datetime, timedelta
 

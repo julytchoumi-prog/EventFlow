@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.4
+    hooks:
+      # Vérification du code Python avec correction automatique
+      - id: ruff-check
+        args: [--fix]
+        files: ^qa/
+
+      # Formatage automatique du code Python
+      - id: ruff-format
+        files: ^qa/
