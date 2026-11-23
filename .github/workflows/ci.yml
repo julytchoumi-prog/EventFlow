@@ -46,14 +46,14 @@ jobs:
         run: pytest tests/api -n auto --alluredir=reports/allure-results --junitxml=reports/junit-api.xml
 
       - name: Tests UI Playwright
+        if: success() || failure()
         working-directory: qa
         run: pytest tests/ui/playwright -n 2 --alluredir=reports/allure-results
-        continue-on-error: true
 
       - name: Tests back-office Selenium
+        if: success() || failure()
         working-directory: qa
         run: pytest tests/ui/selenium_backoffice --alluredir=reports/allure-results --output reports/selenium
-        continue-on-error: true
 
       - name: Rapport Allure
         if: always()
